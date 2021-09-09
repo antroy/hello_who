@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: "antroy/hello_who"
+          image: "antroy/hello_who:latest"
           env:
             - name: GREETING
               value: Hi
