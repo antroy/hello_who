@@ -1,0 +1,27 @@
+---
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: Hello
+  labels:
+    app: hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+        - name: hello
+          image: "antroy/hello_who"
+          env:
+            - name: GREETING
+              value: Hi
+            - name: NAME
+              value: Brian
+          ports:
+            - containerPort: 8000
