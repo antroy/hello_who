@@ -5,5 +5,11 @@ docker-build:
 docker-run:
 	docker run -p 8000:8000 antroy/hello_who
 
-k-build:
+k-base:
+	kustomize build manifests/base
+
+k-staging:
+	kustomize build manifests/staging
+
+k-prod:
 	kustomize build manifests/base

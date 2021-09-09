@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: Hello
+spec:
+  template:
+    spec:
+      containers:
+        - name: hello
+          env:
+            - name: GREETING
+              value: Hello
+            - name: NAME
+              value: Staging
