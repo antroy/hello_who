@@ -6,15 +6,16 @@ if [[ "" == "$tag" ]]
 then
   next_version=0.1.0
 else
-  python <<END
+  next_version=$(python <<END
 version = "$tag"
 parts = version.strip().split('.')
 parts[1] = str(int(parts[1]) + 1)
 print('.'.join(parts))
 END
+)
 fi
 
-git tag $next_version
-git push --tags
+git tag $next_version 1>&2
+git push --tags 1>&2
 
 echo $next_version
