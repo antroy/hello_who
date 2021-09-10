@@ -24,7 +24,7 @@ class CustomHelloHTTPRequestHandler(BaseHTTPRequestHandler):
         
 
 if __name__ == "__main__":
-    PORT = int(environ.get("HELLO_PORT", "8000"))
+    PORT = int(environ.get("PORT_NUMBER", "8000"))
 
     socketserver.TCPServer.allow_reuse_address=True
 
