@@ -1,6 +1,7 @@
 docker-build:
-	docker build -t antroy/hello_who .
-	docker push antroy/hello_who
+	( tag=`./scripts/increment_version.sh`;  \
+		docker build -t antroy/hello_who:$${tag} .; \
+		docker push antroy/hello_who:$${tag} )
 
 docker-run:
 	docker run -p 8000:8000 antroy/hello_who
