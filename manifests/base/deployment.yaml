@@ -20,8 +20,8 @@ spec:
           image: "antroy/hello_who:latest"
           env:
             - name: GREETING
-              value: Hi
+              value: Hey
             - name: NAME
-              value: Brian
+              value: Dude
           ports:
             - containerPort: 8000
