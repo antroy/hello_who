@@ -3,5 +3,5 @@ commonLabels:
   app: hello
 
 resources:
-- deployment.yml
-- service.yml
+- deployment.yaml
+- service.yaml
